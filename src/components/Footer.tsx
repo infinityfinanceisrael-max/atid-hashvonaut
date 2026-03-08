@@ -34,15 +34,15 @@ export default function Footer() {
             <ul className="flex flex-col gap-2 text-slate-300 text-sm">
               <li className="flex items-center gap-2">
                 <span>📞</span>
-                <span>03-000-0000</span>
+                <span>050-966-2136</span>
               </li>
               <li className="flex items-center gap-2">
                 <span>✉️</span>
-                <span>info@atid-hashvonaut.co.il</span>
+                <span>futurecount.il@gmail.com</span>
               </li>
               <li className="flex items-center gap-2">
                 <span>📍</span>
-                <span>תל אביב, ישראל</span>
+                <span>זבוטינסקי 9, בני ברק — מגדל הכשרת היישוב</span>
               </li>
               <li className="flex items-center gap-2">
                 <span>🕐</span>

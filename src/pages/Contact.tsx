@@ -1,9 +1,9 @@
 import { useState, type FormEvent } from 'react'
 
 const contactInfo = [
-  { icon: '📞', label: 'טלפון', value: '03-000-0000' },
-  { icon: '✉️', label: 'אימייל', value: 'info@atid-hashvonaut.co.il' },
-  { icon: '📍', label: 'כתובת', value: 'רחוב דיזנגוף 50, תל אביב' },
+  { icon: '📞', label: 'טלפון', value: '050-966-2136' },
+  { icon: '✉️', label: 'אימייל', value: 'futurecount.il@gmail.com' },
+  { icon: '📍', label: 'כתובת', value: 'זבוטינסקי 9, בני ברק — מגדל הכשרת היישוב' },
   { icon: '🕐', label: 'שעות פעילות', value: 'ראשון–חמישי | 09:00–18:00' },
 ]
 
@@ -210,11 +210,11 @@ export default function Contact() {
                   עדיף טלפון? צלצלו ישירות:
                 </p>
                 <a
-                  href="tel:030000000"
+                  href="tel:0509662136"
                   className="text-2xl font-bold text-white hover:text-sky-300 transition-colors block mt-1"
                   dir="ltr"
                 >
-                  03-000-0000
+                  050-966-2136
                 </a>
               </div>
             </div>
