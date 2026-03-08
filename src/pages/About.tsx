@@ -9,15 +9,32 @@ export default function About() {
 
       <main className="flex-1">
 
-        {/* Section 1 — הסיפור שלנו */}
-        <section className="bg-white py-20 px-6 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#1E3A5F] mb-6">הסיפור שלנו</h1>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              עתיד החשבונאות נולדה מתוך חזון של חברת האם — אין סוף פיננסים בע"מ — אחת מקבוצות הניהול הפיננסי המובילות בישראל.
-              אחרי אלפי לקוחות מרוצים וניסיון של מעל 20 שנה בקרב אנשי המקצוע שלנו, הבנו שיש עוד שירות שהעסקים בישראל זקוקים לו:
-              הנהלת חשבונות מקצועית, אישית ומדויקת.
-            </p>
+        {/* הסיפור שלנו */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-[#1E3A5F] mb-12">הסיפור שלנו</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              {/* Left — Photo */}
+              <div className="flex justify-center">
+                <img
+                  src="/eldar-team.jpg"
+                  alt="אלדר דיין — מנכ&quot;ל עתיד החשבונאות"
+                  className="rounded-2xl shadow-xl w-full max-w-md object-cover"
+                />
+              </div>
+              {/* Right — Text */}
+              <div className="text-right">
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  עתיד החשבונאות נולדה מתוך חזון של חברת האם — <strong>אין סוף פיננסים בע"מ</strong> — אחת מקבוצות הניהול הפיננסי המובילות בישראל.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  אחרי אלפי לקוחות מרוצים וניסיון של מעל 20 שנה בקרב אנשי המקצוע שלנו, הבנו שיש עוד שירות שהעסקים בישראל זקוקים לו: הנהלת חשבונות מקצועית, אישית ומדויקת.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  אנחנו לא עוד משרד הנהלת חשבונות. אנחנו שותפים אמיתיים לדרך. כשאתה מצליח — אנחנו מצליחים. כשיש לחץ בסוף חודש — אנחנו כאן.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
