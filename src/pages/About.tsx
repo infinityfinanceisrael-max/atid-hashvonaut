@@ -1,187 +1,97 @@
-import { Link } from 'react-router-dom'
-
-const values = [
-  {
-    icon: '🎯',
-    title: 'דיוק',
-    desc: 'כל נתון, כל דוח וכל הגשה עוברים בדיקה קפדנית. אצלנו אין "בערך" — יש דיוק מוחלט.',
-  },
-  {
-    icon: '🤝',
-    title: 'אמינות',
-    desc: 'לקוחות עובדים איתנו שנים ארוכות כי הם יודעים שאנחנו עומדים מאחורי כל מה שאנחנו אומרים.',
-  },
-  {
-    icon: '📱',
-    title: 'זמינות',
-    desc: 'שאלה דחופה? מסמך שצריך עכשיו? אנחנו זמינים — בטלפון, בווצאפ ובמייל — ולא נעלים בדיוק כשצריך אותנו.',
-  },
-  {
-    icon: '🏆',
-    title: 'מקצועיות',
-    desc: 'הצוות שלנו מוסמך, מעודכן ומחובר לכל שינוי בחוקי המס. אתם מקבלים את הידע הטוב ביותר שיש.',
-  },
-]
-
-const team = [
-  {
-    name: 'ד"ר רונן ברק',
-    role: 'מייסד ומנהל',
-    bio: 'רואה חשבון מוסמך עם תואר שני בחשבונאות מאוניברסיטת תל אביב. מעל 15 שנות ניסיון בייעוץ פיננסי לעסקים קטנים ובינוניים.',
-    initials: 'רב',
-  },
-  {
-    name: 'מיה אשכנזי',
-    role: 'מנהלת חשבונות בכירה',
-    bio: 'מנהלת חשבונות מוסמכת עם 10 שנות ניסיון. מתמחה בניהול שכר, דוחות מע"מ ותיקי עסקים קטנים.',
-    initials: 'מא',
-  },
-  {
-    name: 'גיל ממן',
-    role: 'יועץ מס ותכנון מיסוי',
-    bio: 'מומחה למיסוי עסקי ובינלאומי. עבד בעבר במשרד ראיית חשבון גדול ומביא ניסיון ותובנות שמחזירות ללקוחות כסף.',
-    initials: 'גמ',
-  },
-]
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 export default function About() {
   return (
-    <div dir="rtl">
-      {/* Page Header */}
-      <section
-        className="py-20 px-4 text-center"
-        style={{ background: 'linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%)' }}
-      >
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-5" style={{ color: '#1E3A5F' }}>
-            קצת עלינו
-          </h1>
-          <p className="text-lg text-slate-600 leading-relaxed">
-            הסיפור מאחורי עתיד החשבונאות — מי אנחנו, למה התחלנו ולמה אנחנו עושים את זה
-          </p>
-        </div>
-      </section>
+    <div className="min-h-screen flex flex-col font-rubik" dir="rtl">
+      <Header />
 
-      {/* Story */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-extrabold mb-6" style={{ color: '#1E3A5F' }}>
-                הסיפור שלנו
-              </h2>
-              <div className="space-y-4 text-slate-600 leading-relaxed">
-                <p>
-                  עתיד החשבונאות נוסדה מתוך אמונה שכל עסק קטן ובינוני ראוי לשירות חשבונאי מקצועי — לא רק חברות גדולות עם כיסים עמוקים.
-                </p>
-                <p>
-                  ראינו שוב ושוב בעלי עסקים שטבעו בנייר, לחצו מרשות המסים, שילמו קנסות מיותרים — כי לא היה להם חשב שמבין אותם באמת.
-                </p>
-                <p>
-                  הקמנו את עתיד החשבונאות כדי לשנות את זה. אנחנו לא עוד משרד שמייצר דוחות — אנחנו שותפים לדרך. מכירים כל עסק לעומק, מבינים את האתגרים שלו ועוזרים לו לצמוח.
-                </p>
-                <p className="font-semibold" style={{ color: '#1E3A5F' }}>
-                  מעל 200 לקוחות. מעל 10 שנים. ו-98% שביעות רצון — לא מספרים בשבילנו, לקוחות אמרו את זה.
+      <main className="flex-1">
+
+        {/* Section 1 — הסיפור שלנו */}
+        <section className="bg-white py-20 px-6 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#1E3A5F] mb-6">הסיפור שלנו</h1>
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              עתיד החשבונאות נולדה מתוך חזון של חברת האם — אין סוף פיננסים בע"מ — אחת מקבוצות הניהול הפיננסי המובילות בישראל.
+              אחרי אלפי לקוחות מרוצים וניסיון של מעל 20 שנה בקרב אנשי המקצוע שלנו, הבנו שיש עוד שירות שהעסקים בישראל זקוקים לו:
+              הנהלת חשבונות מקצועית, אישית ומדויקת.
+            </p>
+          </div>
+        </section>
+
+        {/* Section 2 — מי אנחנו (Stats) */}
+        <section className="bg-[#F0F9FF] py-16 px-6">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="bg-white rounded-2xl shadow-md p-8">
+              <div className="text-4xl font-bold text-[#0EA5E9] mb-2">אלפי+</div>
+              <div className="text-lg text-[#1E3A5F] font-semibold">לקוחות מרוצים</div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-md p-8">
+              <div className="text-4xl font-bold text-[#0EA5E9] mb-2">20+</div>
+              <div className="text-lg text-[#1E3A5F] font-semibold">שנות ניסיון</div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-md p-8">
+              <div className="text-4xl font-bold text-[#0EA5E9] mb-2">98%</div>
+              <div className="text-lg text-[#1E3A5F] font-semibold">שביעות רצון</div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3 — המנכ"ל שלנו */}
+        <section className="bg-white py-20 px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1E3A5F] text-center mb-12">המנכ"ל שלנו</h2>
+            <div className="flex flex-col md:flex-row gap-10 items-center">
+              <div className="md:w-1/2">
+                <img
+                  src="/eldar-team.jpg"
+                  alt="אלדר דיין — מנכ&quot;ל עתיד החשבונאות"
+                  className="rounded-2xl max-w-md mx-auto shadow-lg w-full object-cover"
+                />
+              </div>
+              <div className="md:w-1/2 text-center md:text-right">
+                <h3 className="text-2xl font-bold text-[#0EA5E9] mb-1">אלדר דיין</h3>
+                <p className="text-[#1E3A5F] font-semibold mb-4">מנכ"ל עתיד החשבונאות</p>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  אלדר דיין נבחר בקפידה לעמוד בראש עתיד החשבונאות. עם רקע עשיר בעולם הפיננסי ותשוקה אמיתית לעזור לעסקים לצמוח —
+                  הוא מביא גישה אישית, מקצועית ואכפתית לכל לקוח. עבור אלדר, הנהלת חשבונות היא לא רק מספרים —
+                  היא הבסיס שעליו בונים עסק חזק.
                 </p>
               </div>
             </div>
-            <div
-              className="rounded-3xl p-10 flex flex-col items-center justify-center text-center"
-              style={{ backgroundColor: '#F0F9FF', border: '2px solid #BAE6FD' }}
+          </div>
+        </section>
+
+        {/* Section 4 — מה מייחד אותנו */}
+        <section className="bg-[#1E3A5F] py-20 px-6 text-center text-white">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">למה אנחנו שונים?</h2>
+            <p className="text-lg md:text-xl leading-relaxed text-sky-100">
+              אנחנו לא עוד משרד הנהלת חשבונות. אנחנו שותפים אמיתיים לדרך.
+              כשאתה מצליח — אנחנו מצליחים. כשיש לחץ בסוף חודש — אנחנו כאן.
+              זה לא סלוגן. זו ההתחייבות שלנו לכל לקוח, מהיום הראשון ועד האחרון.
+            </p>
+          </div>
+        </section>
+
+        {/* Section 5 — CTA */}
+        <section className="bg-white py-20 px-6 text-center">
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1E3A5F] mb-6">רוצה להצטרף למשפחה?</h2>
+            <Link
+              to="/contact"
+              className="inline-block bg-[#0EA5E9] hover:bg-[#0284c7] text-white font-bold text-lg px-10 py-4 rounded-full transition-colors duration-200 shadow-md"
             >
-              <div className="text-6xl mb-4">📈</div>
-              <p className="text-5xl font-extrabold mb-2" style={{ color: '#0EA5E9' }}>2013</p>
-              <p className="text-lg font-semibold" style={{ color: '#1E3A5F' }}>שנת הייסוד</p>
-              <p className="text-slate-500 text-sm mt-2">יותר מ-10 שנות ניסיון בשירות עסקים ישראלים</p>
-            </div>
+              צור קשר עכשיו
+            </Link>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Values */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#F0F9FF' }}>
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4" style={{ color: '#1E3A5F' }}>
-              הערכים שלנו
-            </h2>
-            <p className="text-slate-600 text-lg">אלה העקרונות שמנחים אותנו בכל יום</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((v) => (
-              <div
-                key={v.title}
-                className="bg-white rounded-2xl p-7 text-center shadow-sm hover:shadow-md transition-all border border-slate-100"
-              >
-                <div
-                  className="text-4xl w-16 h-16 flex items-center justify-center rounded-2xl mx-auto mb-4"
-                  style={{ backgroundColor: '#E0F2FE' }}
-                >
-                  {v.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: '#1E3A5F' }}>
-                  {v.title}
-                </h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{v.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </main>
 
-      {/* Team */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4" style={{ color: '#1E3A5F' }}>
-              הצוות שלנו
-            </h2>
-            <p className="text-slate-600 text-lg">האנשים שמאחורי השירות</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member) => (
-              <div
-                key={member.name}
-                className="rounded-2xl border border-slate-100 p-7 text-center hover:shadow-lg transition-all"
-              >
-                <div
-                  className="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4"
-                  style={{ backgroundColor: '#0EA5E9' }}
-                >
-                  {member.initials}
-                </div>
-                <h3 className="text-xl font-bold mb-1" style={{ color: '#1E3A5F' }}>
-                  {member.name}
-                </h3>
-                <p className="text-sm font-medium mb-3" style={{ color: '#0EA5E9' }}>
-                  {member.role}
-                </p>
-                <p className="text-slate-600 text-sm leading-relaxed">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section
-        className="py-16 px-4 text-center text-white"
-        style={{ backgroundColor: '#1E3A5F' }}
-      >
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-extrabold mb-4">בואו נכיר</h2>
-          <p className="text-slate-300 mb-8 text-lg">
-            שיחה קצרה וחינמית — ונראה יחד איך נוכל לעזור לעסק שלכם.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-block px-8 py-3.5 rounded-full font-bold text-lg transition-all hover:opacity-90"
-            style={{ backgroundColor: '#0EA5E9', color: 'white' }}
-          >
-            צרו קשר עכשיו
-          </Link>
-        </div>
-      </section>
+      <Footer />
     </div>
-  )
+  );
 }
