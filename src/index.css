@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-primary: #0EA5E9;
+  --color-dark: #1E3A5F;
+  --color-light-bg: #F0F9FF;
+}
+
+* {
+  font-family: 'Rubik', sans-serif;
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1E3A5F;
+  margin: 0;
+  padding: 0;
+}
