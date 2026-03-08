@@ -31,8 +31,8 @@ export default function Header() {
     >
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold" style={{ color: '#0EA5E9' }}>
-          עתיד החשבונאות
+        <Link to="/" className="flex items-center">
+          <img src="/logo.png" alt="עתיד החשבונאות" className="h-10 md:h-12" />
         </Link>
 
         {/* Desktop Nav */}
