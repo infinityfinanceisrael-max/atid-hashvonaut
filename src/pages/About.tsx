@@ -11,19 +11,11 @@ export default function About() {
 
         {/* הסיפור שלנו */}
         <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 max-w-5xl">
             <h2 className="text-3xl font-bold text-center text-[#1E3A5F] mb-12">הסיפור שלנו</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              {/* Left — Photo */}
-              <div className="flex justify-center">
-                <img
-                  src="/eldar-team.jpg"
-                  alt="אלדר דיין — מנכ&quot;ל עתיד החשבונאות"
-                  className="rounded-2xl shadow-xl w-full max-w-md object-cover"
-                />
-              </div>
-              {/* Right — Text */}
-              <div className="text-right">
+              {/* Text — right in RTL */}
+              <div className="text-right order-1">
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
                   עתיד החשבונאות נולדה מתוך חזון של חברת האם — <strong>אין סוף פיננסים בע"מ</strong> — אחת מקבוצות הניהול הפיננסי המובילות בישראל.
                 </p>
@@ -34,11 +26,19 @@ export default function About() {
                   אנחנו לא עוד משרד הנהלת חשבונות. אנחנו שותפים אמיתיים לדרך. כשאתה מצליח — אנחנו מצליחים. כשיש לחץ בסוף חודש — אנחנו כאן.
                 </p>
               </div>
+              {/* Photo — left in RTL */}
+              <div className="flex justify-center order-2">
+                <img
+                  src="/eldar-team.jpg"
+                  alt="צוות עתיד החשבונאות"
+                  className="rounded-2xl shadow-xl w-full max-w-md object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Section 2 — מי אנחנו (Stats) */}
+        {/* Stats */}
         <section className="bg-[#F0F9FF] py-16 px-6">
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="bg-white rounded-2xl shadow-md p-8">
@@ -56,54 +56,63 @@ export default function About() {
           </div>
         </section>
 
-        {/* Section 3 — המנכ"ל שלנו */}
+        {/* הצוות שלנו */}
         <section className="bg-white py-20 px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1E3A5F] text-center mb-12">המנכ"ל שלנו</h2>
-            <div className="flex flex-col md:flex-row gap-10 items-center">
-              <div className="md:w-1/2">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1E3A5F] text-center mb-14">הצוות שלנו</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+              {/* אלדר דיין */}
+              <div className="flex flex-col items-center text-center bg-[#F0F9FF] rounded-2xl p-8 shadow-md">
                 <img
                   src="/eldar-team.jpg"
-                  alt="אלדר דיין — מנכ&quot;ל עתיד החשבונאות"
-                  className="rounded-2xl max-w-md mx-auto shadow-lg w-full object-cover"
+                  alt="אלדר דיין — מנכ״ל עתיד החשבונאות"
+                  className="w-48 h-48 object-cover rounded-full shadow-lg mb-6 border-4 border-[#0EA5E9]"
                 />
-              </div>
-              <div className="md:w-1/2 text-center md:text-right">
-                <h3 className="text-2xl font-bold text-[#0EA5E9] mb-1">אלדר דיין</h3>
-                <p className="text-[#1E3A5F] font-semibold mb-4">מנכ"ל עתיד החשבונאות</p>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  אלדר דיין נבחר בקפידה לעמוד בראש עתיד החשבונאות. עם רקע עשיר בעולם הפיננסי ותשוקה אמיתית לעזור לעסקים לצמוח —
-                  הוא מביא גישה אישית, מקצועית ואכפתית לכל לקוח. עבור אלדר, הנהלת חשבונות היא לא רק מספרים —
-                  היא הבסיס שעליו בונים עסק חזק.
+                <h3 className="text-2xl font-bold text-[#1E3A5F] mb-1">אלדר דיין</h3>
+                <p className="text-[#0EA5E9] font-semibold mb-4">מנכ"ל החברה</p>
+                <p className="text-gray-600 leading-relaxed">
+                  אלדר מוביל את עתיד החשבונאות עם רקע עשיר בעולם הפיננסי ותשוקה אמיתית לעזור לעסקים לצמוח. גישה אישית, מקצועית ואכפתית לכל לקוח.
                 </p>
               </div>
+
+              {/* אפרת כובאני */}
+              <div className="flex flex-col items-center text-center bg-[#F0F9FF] rounded-2xl p-8 shadow-md">
+                <img
+                  src="/efrat-team.jpg"
+                  alt="אפרת כובאני — רואת חשבון"
+                  className="w-48 h-48 object-cover rounded-full shadow-lg mb-6 border-4 border-[#0EA5E9]"
+                />
+                <h3 className="text-2xl font-bold text-[#1E3A5F] mb-1">אפרת כובאני</h3>
+                <p className="text-[#0EA5E9] font-semibold mb-4">רואת חשבון</p>
+                <p className="text-gray-600 leading-relaxed">
+                  אפרת מביאה מקצועיות, דיוק ואמינות לכל תיק לקוח. מומחית בהנהלת חשבונות לעסקים קטנים ובינוניים עם ניסיון רב שנים בתחום.
+                </p>
+              </div>
+
             </div>
           </div>
         </section>
 
-        {/* Section 4 — מה מייחד אותנו */}
-        <section className="bg-[#1E3A5F] py-20 px-6 text-center text-white">
-          <div className="max-w-3xl mx-auto">
+        {/* למה אנחנו שונים */}
+        <section className="bg-[#1E3A5F] text-white py-20 px-6">
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">למה אנחנו שונים?</h2>
-            <p className="text-lg md:text-xl leading-relaxed text-sky-100">
-              אנחנו לא עוד משרד הנהלת חשבונות. אנחנו שותפים אמיתיים לדרך.
-              כשאתה מצליח — אנחנו מצליחים. כשיש לחץ בסוף חודש — אנחנו כאן.
-              זה לא סלוגן. זו ההתחייבות שלנו לכל לקוח, מהיום הראשון ועד האחרון.
+            <p className="text-lg leading-relaxed text-blue-100">
+              אנחנו לא עוד משרד הנהלת חשבונות. אנחנו שותפים אמיתיים לצמיחה. כל לקוח מקבל ליווי אישי, מענה מהיר וייעוץ שיכול לחסוך לו אלפי שקלים בשנה.
             </p>
           </div>
         </section>
 
-        {/* Section 5 — CTA */}
+        {/* CTA */}
         <section className="bg-white py-20 px-6 text-center">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1E3A5F] mb-6">רוצה להצטרף למשפחה?</h2>
-            <Link
-              to="/contact"
-              className="inline-block bg-[#0EA5E9] hover:bg-[#0284c7] text-white font-bold text-lg px-10 py-4 rounded-full transition-colors duration-200 shadow-md"
-            >
-              צור קשר עכשיו
-            </Link>
-          </div>
+          <h2 className="text-3xl font-bold text-[#1E3A5F] mb-6">רוצה להצטרף למשפחה?</h2>
+          <Link
+            to="/contact"
+            className="inline-block bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold py-4 px-10 rounded-full text-lg transition-colors duration-200"
+          >
+            צור קשר עכשיו
+          </Link>
         </section>
 
       </main>
